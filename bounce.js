@@ -21,7 +21,9 @@ class Bounce {
     this.delete(id);
   }
   delete(id) {
-    delete this._stack[id];
+    if (this._stack[id]) {
+      delete this._stack[id];
+    }
   }
 }
 const bounce = new Bounce();
